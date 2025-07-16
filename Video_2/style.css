@@ -1,0 +1,5 @@
+body{
+    background-color: red;
+    color : white;
+}/*the html file doesnt know abt the css file we need 
+it to know abt it for this command to work*/
