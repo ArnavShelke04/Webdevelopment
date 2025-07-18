@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>images</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <img src="Screenshot 2025-07-18 130929.png" alt="train_image" width="230"
+        height="230"><!--agar image lost hojaye toh ek alternate ke liye train_image likh ke aayega
+    aur width pixels main hoti hai
+    Agar dono height width doge toh fir chance hai ki image stretch ho jaye , aur agar stretch nahi hone dena hai toh bas height dena hai hume-->
+    <br><!--used for breaking and continuing with next line-->
+    <table>
+        <caption>Details</caption><!--kind of info dene ke liye-->
+        <thead>
+
+            <tr><!--table row tag hai iske elements row main aayenge-->
+                <th>Name</th><!--table heading tag ... pehle row main heading aati hai-->
+                <th>Anime</th>
+                <th>Age</th>
+
+            </tr>
+        </thead><!--header content-->
+        <tbody>
+            <tr>
+                <td>Arnav</td><!--table data ka tag hai-->
+                <td>Jojo</td>
+                <td>18</td>
+            </tr>
+            <tr>
+                <td colspan="2">Sam</td>
+                <!--iska matlab sam ab 2 columns ki space lega matlab uska jo cell hoga uski size horizontally twice ho jayegi and accha dikhne ke liye humne agla column hata diya so that table ka shape disrupt na ho-->
+                <!-- <td>JJK</td>-->
+                <td rowspan="2">20</td>
+            </tr>
+            <tr>
+                <td>Shinji</td>
+                <td>Bleach</td>
+
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Shinji</td>
+                <td colspan="2"">Bleach</td>
+
+            </tr>
+        </tfoot><!--footer content-->
+    </table>
+
+    <ul type="square"><!--unordered list
+        shape change kar sakte hai but by default disc hota hai-->
+        <li>Harry</li><!--list items-->
+        <li>Harry</li>
+        <li>shubham</li>
+    </ul>
+     <ol type="A"><!--ordered list
+        yaha par bhi types hote hai-->
+        <li>Harry</li><!--list items-->
+        <li>Harry</li>
+        <li>shubham</li>
+    </ol>
+    <dl><!--definition list-->
+        <dt>Mitochondria</dt><!--definition term-->
+        <dd>Powerhouse of the cell</dd><!--definition definition-->
+    </dl>
+
+
+</body>
+
+</html>

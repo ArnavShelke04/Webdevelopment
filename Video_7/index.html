@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms-lets learn it</title>
+</head>
+
+<body>
+    <h1>Form to apply for fun</h1>
+    <form action="post"><!--we will learn about get and post later-->
+        <div> <label for="username">Enter</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username">
+        </div><!--placeholder batata hai ki andar ka translucent text kya hai
+        REFER the website of codewithharry for more info on attributes-->
+        <div> <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+        </div>
+        <div>
+            <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+            <label for="subscribe">Subscribe for abc</label>
+        </div>
+        <div>
+            <label for="comment">Enter your comment</label>
+            <br>
+            <textarea name="comment" id="comment" rows="4" cols="50"></textarea>
+        </div>
+        <div>
+            <select name="fruits">
+                <option value="cherry">cherry</option>
+                <option value="banana">banana</option>
+                <option value="apple">apple</option>
+            </select>
+        </div>
+    </form>
+</body>
+
+</html>
