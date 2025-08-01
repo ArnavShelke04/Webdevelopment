@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <video src="video.mp4" width="255" controls autoplay loop muted poster="download.jpg" alt="video"></video>
+    <!--controls gives us controls like download,like, etc and these controls are decided by the  browser. autoplay as the name suggests autoplays the video when the website is loaded. loop basically plays the video on loop and muted attribute mutes the video. poster attribute basically addds the thumbnail to the video -->
+    <audio src="music.mp3" controls autoplay loop muted preload="none" ></audio><!--without the controls attribute you wont see the audio bar. we dont usually use the muted attribute but sometimes we use it when we introduce multiple audios. preload is used for preloading audio or data about it , 'none' is default which preloads nothing , 'metadata' preloads the data about the audio and 'auto' preloads the entire audio.other attributes work the same -->
+    <svg xmlns="http://www.w3.org/2000/svg" height="100" width="100">
+        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red"/>
+    </svg>
+    <!--you need to add the xmlns thing for the svg to work and svg is kind of a short image-->
+    <iframe src="http://www.youtube.com" width="500" frameborder="0"></iframe>
+    <!--iframe basically lets us add a small window which will contain another website to our website -->
+
+</body>
+</html>
