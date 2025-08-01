@@ -1,0 +1,9 @@
+.red{
+color: red;
+}/*classes are referenced with a '.'*/
+.bg-yellow{
+background-color: red;
+}
+#firstdiv{
+    background-color: red;
+}/*ids are referenced with a #*/
