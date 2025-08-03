@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /*Element selector*/
+        div{
+            background-color: red;
+        }
+        /* .red means we are referring to class red and if we want to refer an id we use #id*/
+        .red{
+            background-color: pink;
+        }
+        /* Id Selector (by selecting the text and doing CTRL+/ you can comment the selected text)*/
+        #green{
+            background-color: green;
+        }
+        /* Child Selectors */
+        div > p{
+            color: turquoise;
+            background-color: purple;
+        }
+        /* Iska matlab agar koi bhi div ke andar p hoga toh fir use ye saare properties as above kardo par agar div ke andar kuch tag ho aur uske andar p ho toh fir uspar kaam nahi karega cuz direct child hona chahiye as in if div ke andar article ho and uske andar p ho toh it wont work*/
+        /* Descendant selector */
+        div > p{
+            color: turquoise;
+            background-color: purple;
+        }
+        /* Descendant selector ko fark nahi padta upar vali case pe woh bolta hai ki agar kisi bhi point pe p hoga tags ke andar toh fir ye apply kardo */
+        /* Universal selector */
+        *{
+            margin: 0;
+            padding: 0;
+            /* margin is the space between our content and ends of our page its usually some value given by our browser and padding is the space between two contents for eg two sentences or such */
+        }
+        /* * is basically applying the changes to everything*/
+        /* pseudo selector */
+       a:visited{
+        color: yellow;
+       }
+       /* after visiting color will change */
+       a:link{
+        color: green;
+       }
+       /* the color will be green before visiting */
+       a:active{
+        border-color: salmon;
+       }/* when you try to click on that the color will change to salmon */
+       a:hover{
+        background-color: lightblue;
+       }/* uske upar hover ya fir cursor ghumane par uska color change hoga */
+       p:first-child{
+        color: hotpink;
+       }/* jaha jaha bhi p first child rahega kisi tag ka vaha vaha uska color hotpink ho jayega and pay attention im saying first child not first descendant and refer the class 'one' example */
+    </style>
+</head>
+<body>
+    <div class="one">
+        <p>i am first child</p>
+        <p>i am second child</p>
+    </div>
+    <div class="red">
+        im a friend
+       <p> im a div</p>
+       <article>
+        <p>im too lazy</p>
+       </article>
+    </div>
+    <div>im sad</div>
+    <!--the div css is a general one and will apply to every div-->
+    <div id="green">i dont wanna talk</div>
+    <a href="www.google.com">Google</a>
+    <a href="www.facebook.com">facebook</a>
+
+</body>
+</html>
