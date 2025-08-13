@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonts and colors in css</title>
+    <style>
+        h1{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        p{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+             font-style: italic;/*gives italian style */
+             font-weight: 500;
+             text-decoration: underline;
+             font-size: 20px;
+             /* agar size nahi doge toh fir p ka size use hoga. One more tip is go to your website>inspect>computed>click on font size and then use up and down key for setting the size as per your requirement and then note down the desired pixel in your actual code and this works on other font attributes as well*/
+             line-height: 4;
+             /* iske vajah se ek p tag ke andar ke 2 lines ke beech vali space change hogi .Default line height 1.1 or 1.2 hoti hai.Agar usse bada chahiye then choose smth greater than 1.2*/
+             /* letter-spacing: 25px; */
+        }
+        /* you can download more fonts from google fonts and then import them using the link tag or you can import multiple font families using the #import tag*/
+        /* agar pehla font nahi hoga yeh list main toh dusra use hoga and agar dusra available nahi hoga device main toh teesra hoga and so on  */
+        h2{
+            text-transform: capitalize;
+            /* mere text main about ka a chota hai par fir bhi ye use capital kar dega ... aur bhi hai transformations like uppa case or lowa case */
+             text-decoration: underline; 
+            text-decoration-color: purple;
+            text-decoration-style: dotted;
+            text-decoration-thickness: 7px;
+            /*underline ki width*/ 
+            text-indent: 45px;
+            text-align: center;
+            /*left side se space deta hai 45 px se*/    
+            text-overflow: ellipsis;
+            /* many options for these as well 
+            when you do tdth and enter then it gets converted to text decoration thickness and these shortcuts can be used anywhere*/
+        }
+        .lorem{
+            border: 2px solid pink;
+            width: 145px;
+            text-overflow: ellipsis;
+            /* jab overflow ki value hidden hoti hai toh fir jo uske box ke bahar ka content hai woh hidden rehta hai and jab text overflow ellipsis hota hai uske saath tab woh jo hidden content hai uske jagah dots hote hai and jab text overflow clipped hota hai tab hidden part clip ho jata hai */
+            overflow: hidden;
+            word-break: break-all;
+            /* word break :break all se basically jo humare text ke hidden parts main jo words break ho rahe hai woh agle line main continue ho jayenge */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Fonts</h1>
+        <h2>about Fonts</h2>
+        <p>this is about fonts</p>
+        <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati fugiat quis corrupti, maiores, possimus at labore ad consequatur modi odit dicta harum optio neque error ut iste reiciendis deleniti voluptates asperiores autem facere illo? Possimus provident rerum repellendus unde error? Laboriosam vel consectetur voluptatum nihil.</p>
+    </div>
+</body>
+</html>

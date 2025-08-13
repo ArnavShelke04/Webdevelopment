@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow property</title>
+    <style>
+        .box{
+            width: 40vw;
+            height: 30vh;
+            border: 2px solid black;
+            /* overflow: scroll; */
+            /* agar cheeze overflow hoti hai out of the box then using scroll you can add a scroll bar to the box */
+            overflow: auto;
+            /* auto kehta hai ki agar overflow karta hai toh scrollbar dedo agar nahi karta toh fir rehne do vaise hi */
+            white-space: nowrap;
+            /* iska matlab hai ek hi line main lelo aur neeche matt girao */
+            text-overflow: ellipsis;
+            /* iske saath overflow: hidden; and white-space: nowrap; lagta hai for this thing to work */
+            /* overflow: clip;
+            yeh bhi almost similar hota hai bas ye programmatically scroll ko hata deta hai   */
+            overflow-x: hidden;
+            overflow-y: scroll;
+            /* individually bhi control kar sakte hai aur in dono ko ek saath bhi likh sakte hai by 
+            overflow:auto hidden 
+            which means x main auto aur y main hidden*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto at ad cum quo. Magni sint fugit ratione hic, iusto inventore laborum! Atque architecto, at fugiat, aspernatur incidunt nulla dignissimos delectus exercitationem aliquam iure unde culpa excepturi, natus repellat dicta vitae! Itaque eius modi quisquam id vitae ipsum dignissimos sequi molestiae. Iusto debitis dolor omnis?
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity in css</title>
+    <!-- imagine if the universal selector says background color red and the one in h1 says that background color red,which is gonna be followed is told by specificity -->
+     <style>
+        /* the specificity is 1 */
+        h1{
+            color: aqua;
+        }
+        /* the specificity is 1+10 (adding up the specificity of element tag and class tag) as the specificity increased then its priority is increased*/
+        h1.yellow{
+            color: yellow;
+        }
+        /* the specificity is 10*/
+        .cred{
+            color: red!important;
+        }
+        /* when you use important tag you can prioritise that thing over all even over inline css */
+        /* the specificity is 10*/
+        .cpurple{
+            color: purple;
+        }/* agar same selector ho toh fir jo sabse last likha jayega wahi apply hoga similar to how we upodate a variable and for eg if we use the class selectors without the h1,the one in the end would be selected*/
+        /* agar ye sab na ho toh fir specificity calculate ki jayegi which is a value and then uske hisaab se ye order aati hai
+        inline styling>ID selector>Class or Attribute selector>Element selector>Universal selector 
+        isiliye koshish yahi rahegi ki low specific selector use kiya jaaye jisse use overwrite karna asaan ho jaaye*/
+        /* the specificity is 10*/
+        [data-x=a]{
+            background-color: pink;
+        }
+        /* the specificity is 1+10+10+10+10
+        the specificity of [href] which is an attribute and that of :hover(a pseudo selector) which is 10 for each gets added as well*/
+        a.harryclass.rohan-class[href]:hover{
+            color: magenta;
+        }
+        /* we are gonna avoid inline css,important and overwriting properties just to make our website easier but questions regarding this can be asked in the interview */
+     </style>
+</head>
+<body>
+    <div>
+        <h1 class="yellow cred cpurple" data-x="a" style="color: blue;">CSS Specificity</h1>
+    </div>
+</body>
+</html>

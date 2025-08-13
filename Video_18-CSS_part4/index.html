@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Boxmodel</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+        }
+        .box{
+            background-color: aqua;
+        }
+        .box1{
+            color: yellow;
+            padding: 10px;
+            margin: 25px;
+            border: 2px solid blue;
+            height: 200px;
+            box-sizing: border-box;
+        }/* right click on the website to inspect the properties */
+        /* margin element ke bahar lagti hai and element ke andar space padding deta hai */
+        /* go in inspect and then computed for deeper understanding */
+        /* total height= height+top padding+bottom padding+top border+bottom border
+        same for width 
+        So agar main bas height 200 likhunga toh uski total height 200 se jyada ho jayegi cuz of border and padding 
+        when we use box-sizing :border-box hum uski total height 200 kar denge you can check that in computed inspect if you want*/
+        .box2{
+            color: red;
+            padding: 10px;
+            margin: 25px;
+            border: 2px solid blue;
+            height: 200px;
+            box-sizing: border-box;
+        }
+        /* ab dono ki margin 25 hai toh beech main resultantly 50 ki margin aani chahiye par aise nahi hota ...margin collapse ka concept kehta hai ki agar do elements ki margin overlap ho rahi ho to dono ke beech main jo maximum wali margin aa jayegi na ki unka sum. isse agar different bhi ho toh fir maximum lag jayegi beech main */
+    </style>
+</head>
+<body>
+    <!-- css main har ek cheez jo bhi hum html main banaate hai 
+    woh ek box hoti hai for example yeh div span and all ye sab
+    ek container main hote hai -->
+    <!-- if you write div.box it will make a div with class box -->
+    <!-- <img src="box model.png" alt="image"> -->
+    <div class="box box1">I am a box</div>
+    <div class="box box2">I am another box</div>
+</body>
+</html>

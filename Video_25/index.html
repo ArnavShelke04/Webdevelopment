@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling lists</title>
+    <style>
+        nav ul li{
+            list-style: devanagari;
+            background-color: yellow;
+            /* iske baad bhi marker bahar reh jayega agar list style postion ka use nahi karoge toh  */
+            list-style-position: inside;
+            list-style-type:"emoji" ;
+            /* you can even use an emoji  */
+            border: 2px solid black;
+            list-style-image:url("image link") ;
+            /* used for applying an image  */
+            list-style: disc inside url("image link");
+            /* disc and image dont work together , image is gonna be the one applied but i have put them altogether in one place for understanding , if you remove image then disc will work */
+            /* normally hum websites ke liye bohot kam use karte hai we just use 
+            list-style: none;
+            display:flex
+            padding:34px;
+            par ye sab nav main hota hai */
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+</body>
+</html>

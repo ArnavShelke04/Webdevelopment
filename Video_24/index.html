@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadows and Outlines</title>
+    <style>
+        .box{
+            border: 2px solid black;
+            padding: 34px;
+            box-shadow: 5px 15px 5px green;
+            /* you dont need to byheart the syntax you can just use the inspect option and if you need understanding its in the image below*/
+            .text-element{
+                text-shadow: 2px 2px 4px purple;
+                outline:2px solid blue;
+                border: 2px solid black;
+                border-radius: 8px;
+            }
+        }
+        /* outlines aur border main difference yahi hai ki outlines border ke andar hoti hai aur woh space nahi leti ,borders ke corners ka shape change kar sakte hai par outlines ka nahi and you can add space between outline and element using the outline-offset property.Here toh we put outlines inside a paragraph which is inside a div but in general if we put it side by side we can see that borders lie outside outlines*/
+    </style>
+</head>
+<body>
+    <div class="box">
+        i am a box
+        <img src="Screenshot 2025-08-09 195840.png" alt="image">
+        <!-- just go through the image for better understanding -->
+         <p class="text-element">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta, tempore? Iusto similique inventore expedita maiores iste laudantium voluptatibus dolor, omnis tenetur unde, libero ducimus necessitatibus beatae incidunt eius eligendi praesentium ipsum deserunt alias aliquid!</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>size units</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        .box{
+            border: 2px solid black;
+            width: 2048px;/*dont use space btwn number and px*/
+            background-color: aquamarine;
+            width: 80vw;
+            margin: auto; 
+            height: 10vh;
+            /* margin auto matlab dono side se automatically margin de dega aur center main aayega text but ye bas block elements ke liye work karega            */
+        }
+        /* pixel:it is 196th of an inch.Screen ki width 2048 pixels hai and agar aap 2049 bhi likh do toh fir ek horizontal scroll bar aa jayega 
+        viewport width: 100vw means 100% of the screen width and 80vw means 80% of the same and for the horizontal scrollbar to appear you have to keep the value above 100
+        viewpoet height: same logic as vw but for  height
+        em: ab container p main kuch nahi likhoge tab container se size inherit kar lega which is 18px and jab hum container p main 1.5 em likhte hai tab 1.5 times the inherited size ho jayega which is 27px aur agar hum kuch specify nahi karenge .container main toh fir by default 16px hota hai p ka font size and uss hisaab se change ho jayega
+        rem: ab for example agar humne html which is a root element uska size change kar diya toh hum use karenge rem which does the same work as em but for root elements
+        vmin: ab mobile main width is smaller than height so vmin refers to width and in pc height is smaller than width so vmin refers to width and now for mobile vmin will work  as vw and for pc vmin will work as vh
+        vmax: it has the same logic as vmin but for max things
+        min-height: ab ajeeb lagega agar kam content hone ke vajah se footer in the middle of the page aagaya toh isiliye hum use karte hai min-height jo kehta hai ki tum jo karna hai woh karo par meri min height defined rahegi and as per the content meri max height differ kar sakti hai*/
+        .container{
+            border: 2px solid black;
+            width: 2048px;/*dont use space btwn number and px*/
+            background-color: aquamarine;
+            width: 80vw;
+            margin:23px auto; 
+            height: 80vh;
+            font-size: 18px;
+            /*23 px vertical height ke liye hai and width ke liye auto hai */
+        }
+        html{
+            font-size: 12px;
+        }
+        .container> div{
+            font-size: 1.5rem;
+            /* agar rem ke jagah em likh doge toh em wala use hoga instead of rem kyuki wahi inherit hoga  */
+            width: 50%;
+            /* ab iska matlab hai ki jitni parent ki height hogi uski 50% hogi para ki */
+        }
+        .container>div>p{
+            width: 50%;
+            /* iski width para ke width ki 50% hogi */
+        }
+        .mycont{
+            background-color: red;
+            color: yellow;
+            font-size: 22px;
+            width: 100vmin;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        this is a box
+    </div>
+    <div class="container">
+        <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem iure inventore minus laboriosam quisquam consequatur dolorem, iste itaque temporibus ducimus beatae ut, delectus quibusdam dolore ullam accusamus tenetur animi eos deleniti excepturi fuga non nesciunt. Commodi, tempore maxime. Excepturi quis pariatur commodi accusantium maiores aperiam nisi quos tempora voluptate. Nostrum optio reprehenderit sed perspiciatis!
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci laboriosam animi ipsa facere aspernatur dolore! Cupiditate, animi consequuntur iste nesciunt laborum dolorem.
+        </p>
+    </div>
+    </div>
+    <div class="mycont">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam rem laboriosam atque commodi ducimus sit illo eveniet dolorum quis neque beatae, officiis hic autem. Inventore suscipit nesciunt ratione voluptates veniam possimus ipsa, provident debitis.
+    </div>
+</body>
+</html>
