@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media-Queries</title>
+    <style>
+        /* Media queries basically kehti hai ki agar koi insaan doosre device main use karta hai website toh styles ko change kiya jaaye */
+        body{
+            background-color: red;
+        }
+        /* @media not|only mediatype and (expressions){
+        CSS-Code;
+        } */
+        /* syntax for media tag ... not says that dont apply for this mediatype and only says that only apply for this mediatype */
+        @media screen and (orientation:landscape){
+            body{
+                border: 2px solid purple;
+                /* hum landscape ya fir portrait dono use kar sakte hai ... landscape means width is greater that and portrait is just ulta */
+            }
+        }
+        @media only screen and (max-width :455px){
+            body{
+            background-color: pink;
+            /* check in inspect by varying the size */
+            /* agar uski max width is 455px ya fir usse kam ho toh fir bg color pink ho jayega */
+            }
+            .boxes{
+                flex-direction: column;
+                /* we will study abt flexbox later */
+            }
+        }
+        .boxes{
+            display: flex;
+        }
+        .box{
+            width: 344px;
+            height: 344px;
+            background-color: steelblue;
+            margin: 3px;
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+    Hello im a red body guy!
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

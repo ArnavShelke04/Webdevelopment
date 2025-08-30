@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS variables</title>
+    <style>
+        :root{
+            /* global variable */
+            --color: rgb(103, 103, 212);
+            --seccolor: rgb(56, 56, 140);
+            --defpad: 23px;
+            --defop:0.3;
+            /* CSS variables can pretty much hold any value and not just color */
+            /* we made variables that store value of our colors so that we can use them later on and there wont be any mistake in using the same color again and the website could seem consistent. One more benefit is that we can change our color system very easily if we wanted by changing the variables */
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .nav{
+            background-color:var(--color);
+        }
+        .container{
+            background-color:var(--seccolor);
+        }
+        ul{
+            display: flex;
+            /* we will discuss about flex later on */
+        }
+        ul li{
+            opacity:var(--defop);
+            list-style: none;
+            padding: var(--defpad);
+            border: 2px solid var(--seccolor);
+        }
+        ul li:first-child{
+            --color:rgb(133, 127, 49);/*local variable*/
+            background-color: var(--color,blue);
+            /* we can rewrite our color variable for a single element.If no variable named color exists then blue will be used */
+
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contacts</li>
+        </ul>
+    </div>
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere impedit doloremque totam debitis nihil provident veniam odio vitae corporis fuga labore ratione fugiat dolore sapiente, quo maiores est recusandae non rerum rem accusantium perspiciatis repellendus. Expedita facilis esse est aut sint fugiat, nulla aperiam tempora!
+    </div>
+</body>
+</html>
