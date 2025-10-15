@@ -1,15 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Float and clear</title>
+    <style>
+        .cards{
+            border : 2px solid black;
+            display: flow-root;
+        }
+        /* initially toh without flow-root ke image overflow karegi. but after using flowroot image container ke andar rahegi */
+        .card{
+            border : 2px solid red;
+        }
+        img {
+            float: left;
+        }
+        /* ye karne se the image will stick to the left side and allow the rest to go on the right */
+        .card:nth-child(3){
+            clear: left;
+            /* clear: both;-- for clearing both sides */
+        }
+        /* imagine hume apne element ke left side pe kuch nahi float hona chahiye, then we use clear:left for that */
+        /* first child is img,second is card1 and third one is our desired one that is card2 */
+    </style>
 </head>
+
 <body>
     <div class="cards">
-        <div class="card">card1</div>
-        <div class="card">card2</div>
+        <img src="pngwing.com.png" alt="" width="230">
+        <div class="card">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur ullam necessitatibus ut ratione blanditiis nulla, aut rem pariatur minus! Placeat beatae est dolorem sunt accusamus fuga esse atque, reprehenderit quasi impedit, sapiente provident in?</p>
+        </div>
+        <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci dignissimos expedita tempore minus facere quae eveniet eius a voluptate, ducimus illo obcaecati, cupiditate corrupti ullam, sequi incidunt recusandae! Enim culpa autem quaerat modi maxime quisquam quae dolore impedit error quam eius repudiandae recusandae suscipit, dolor nemo. Aliquid fugiat maxime ab nulla quidem quae dolor inventore iste molestiae? Voluptatem neque eaque illum quam necessitatibus expedita beatae cupiditate excepturi natus rerum ratione a eius ut minima doloribus quidem atque, architecto sit exercitationem! Enim, dolorum! Labore odio quaerat ducimus minima expedita distinctio quasi, itaque, suscipit nisi consequuntur, natus ullam! Iure distinctio tempore accusamus doloribus molestias voluptatibus labore officia modi laborum nulla, dicta quia rerum inventore, eos commodi perspiciatis exercitationem totam quo adipisci quidem culpa. Fugit explicabo, error consequatur sunt suscipit cumque quae, ducimus hic esse, ipsum repudiandae pariatur nemo quas saepe? Tempora illo rem odio eligendi natus numquam veniam adipisci, minus nulla eum harum? Ratione, ea molestias molestiae blanditiis laboriosam totam, repellendus praesentium debitis omnis ab nulla possimus rem tempore sapiente, libero quas. Reprehenderit veniam aliquid accusantium! Excepturi cumque itaque repellendus sit quidem porro reprehenderit neque alias nesciunt. Neque molestiae itaque labore maiores beatae natus eveniet officiis? Dolorem officiis vel eveniet! Unde totam nihil nostrum quod, aliquam odit, quae ipsa dolore id omnis debitis! Explicabo eius natus nesciunt tenetur possimus blanditiis repellendus pariatur vero quibusdam non veritatis quo, mollitia laboriosam esse et distinctio iure excepturi vel autem quia debitis? Mollitia consectetur error voluptate illum, ab quasi. Non excepturi distinctio ratione at nostrum voluptas dolorem sit nesciunt, natus sint. Veniam optio deserunt, dolore totam obcaecati odit, quae odio facere officia consequatur provident nemo ex natus dolorem expedita mollitia omnis, cupiditate porro nesciunt! Repudiandae blanditiis magni nemo maxime repellat similique veniam, adipisci numquam tempora, voluptas dignissimos illo facilis culpa modi porro error aut. Incidunt nobis vel modi veritatis, maxime ipsa dolores, accusantium praesentium sapiente totam aspernatur omnis qui voluptatem, harum dolor quod autem ullam. Saepe, facere facilis illum a accusantium eveniet voluptate, cum sed laborum earum illo? Vitae!</div>
         <div class="card">card3</div>
     </div>
 </body>
+
 </html>

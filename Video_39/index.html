@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS grid</title>
+    <style>
+        .container{
+            border: yellow solid 2px;
+            display: grid;
+            grid-template-columns: [pehla]120px [doosra] 100px [teesra];
+            /* 3 grid lines ke liye 3 naam mere taraf se */
+            /* will give me two colums of size 120px and 100px respectively */
+            grid-template-rows: 100px 100px 100px;
+            /* Grid-track - an area btwn two grid lines
+            Grid area - an area btwn any 4 grid lines */
+        }
+        .box{
+            border: red solid 2px;
+            height: 55px;
+            width: 55px;
+        }
+        .item4{
+            /* hum apne hisaab se ye items ki position change kar sakte hai in our grid using our grid lines. normally jaise python main lists ki numbering hoti hai ( 1,2,3... or -5,-4,-3,-2,-1) vaise numbered hoti hai for both horizontal and vertical grid lines but if we want we can name the grid lines as per our comfort */
+            grid-row: 1/2;
+            /* this means jo item4 ki row position hogi voh 1st grid line se start hogi and 2nd grid line pe end hogi */
+            grid-column: 1/2;
+            /* if u only do this for item 4 , item 1 apne aap shift ho jayega but if u do this for item 1 as well , dono items overlap ho jayenge */
+        }
+        .item1{
+            grid-column: 1/2;
+            /* grid-column: pehla/doosra; */
+            grid-row: 1/2;
+            /* grid-row-start: 1;
+            grid-row-end: 2; 
+            one and the same thing*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box item1">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box item4">4</div>
+        <div class="box">5</div>
+    </div>
+</body>
+</html>

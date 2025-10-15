@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+        /* without flexbox toh neeche aa jayenge saare elements */
+        .container{
+            border: 2px solid red;
+            display: flex;
+            height: 80vh;
+            /* ye container main likhne ke baad hum flexbox ke properties use kar sakte hai */
+            justify-content: center;
+            
+            /* justify-content ke aur bhi bohot saare properties hai check inspect
+            also for align items */
+            align-items: center;
+            
+            flex-direction: row-reverse;
+            /* controls elements kaise chahiye hume  */
+            /* jiss direction main elements hai that is main axis and uske perpendicular vala is cross axis 
+            justify content works on the basis of main axis and align items work on cross axis*/
+            flex-wrap: wrap;
+            /* agar jyada items hai and hume use flow hone nahi dena tab hum wrap use karte hai 
+            wrap se ye neeche aajayenge*/
+            align-content: center;
+            /* agar multiple lines main wrap ho raha hai toh align-content use karenge */
+            flex-flow: row wrap;
+            row-gap: 30px;
+            column-gap: 10px;
+            /* gap:30px 10px; */
+            /* gap aate hai element ke beech main both horizontal and vertical (u can define them individually), you can use margin and padding as well */
+        }
+        .item{
+            height: 32px;
+            width: 32px;
+            border: 2px solid black;
+            background-color: blueviolet;
+            
+        }
+        .order-1{
+            order:1;
+        }
+        .order-2{
+            order:2;
+        }
+        .order-3{
+            order:3;
+        }
+        /* jitna jyada order utna end main aayega item */
+        .item1{
+            flex-grow: 2;
+        }
+        .item2{
+            flex-shrink: 2;
+            /* jaise screen chhoti hogi ye element 2x speed se shrink hoga */
+            align-self: flex-start;
+            /* apne aap ko align kar lega 
+            flex items should be off for this to work */
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="item item1">1</div>
+            <div class="item item2">2</div>
+            <div class="item">3</div>
+            <div class="item order-1">4</div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item">10</div>
+        </div>
+    </main>
+</body>
+</html>

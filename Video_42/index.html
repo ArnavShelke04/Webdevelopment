@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 100vw;
+            height: 80vh;
+            border: 2px solid purple;
+            
+        }
+        .box{
+            height: 50px;
+            width: 50px;
+            border: 2px solid black;
+            background-color: beige;
+            /* transform: rotate(40deg); */
+            /* rotate by 40 degrees */
+            transform: rotate(0.25turn);
+            /* 360 degrees is one turn thus 0.25 turn is 90 degrees */
+            /* transform: rotateX(40deg); */
+            /* will rotate 40degrees about X axis where Z axis is inside the screen */
+            /* same for y and z */
+            transform: scale(1.5);
+            /* use scale 3d for 3d transformations */
+            transform: skew(34deg);
+            /* looks like it is pulled from both sides
+            no skew in z axis */
+            transform: translate(100%);
+            /* all together */
+            transform: rotate(0.25turn) translate(100%) scale(1.5);
+            transform-origin: 50% 50%;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">box</div>
+    </div>
+</body>
+</html>

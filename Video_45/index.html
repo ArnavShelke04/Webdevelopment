@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+    <style>
+        .container{
+            background-color: rosybrown;
+            width: 50vw;
+            height: 40vh;
+        }
+        .box{
+            background-color: aqua;
+            width: 5vw;
+            height: 4vw;
+            transition-property: transform;
+            /* this tells us ki kispe lagg rahi hai transition property  */
+            /* transition-property: all; */
+            transition-duration: 3s;
+            /* kitne time tak chalega */
+            transition-timing-function:ease-in-out ;
+            /* go to inspect and go to this property and then try out different timing functions ... these are basically functions that tell us that how speed is gonna change wrt time 
+            You can even copy paste your own beziar function instead of the default ones*/
+            transition-delay: 1s;
+            /* kitni der baad chalega */
+            /* ye properties lagane ke baad if u turn on or off the translate class in inspect ,you will be able to see the effects */
+            /* transition: transform  3s ease-in-out 1s; */
+            /* all in one */
+        }
+        .translate{
+            transform: translateX(10vw);
+            transform: translateY(10vh);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box  translate"></div>
+    </div>
+</body>
+</html>

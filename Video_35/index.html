@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS selectors</title>
+    <style>
+        .box:first-child{
+            background-color: lavender;
+        }
+        /* self explanatory */
+        .box::first-line{
+            color: purple;
+        }
+        /* in this case first line will get the styles, and it doesnt depend on which device you are viewing it or number of words your first line has on every device */
+        .boxes *{
+            color:pink;
+            border: 2px solid black;
+        }
+        /* boxes class ke saare elements pe lag jayega */
+        [data-color="primary"]{
+            margin-top: 45px;
+        }
+        p,a,.box{
+            padding-bottom: 35px;
+            /* grouping of selectors */
+        }
+        /* .box:nth-child(even){
+            background-color: blueviolet;
+        }agar even ho toh apply hoga.. we count from the top */
+        .box:nth-last-child(2){
+            background-color: aquamarine;
+        }
+        /* agar neeche se second ho toh apply hoga */
+        .boxes::before{
+            content: "za warudo";
+        }
+        /* main content ke pehle dynamically add kar diya */
+        /* we can use after as well */
+        ::selection{
+            color: salmon;
+            background-color: lemonchiffon;
+        }
+        .box::first-letter{
+            color: peru;
+
+        }
+        /* when we select some text using shift or mouse its color will change to salmon  */
+        input::placeholder{
+            color:tomato;
+        }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div class="box" data-color="primary">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus nisi ea quasi est et, tempore blanditiis officiis quas at omnis a exercitationem?</div>
+        <div class="box">Hey im a box</div>
+        <div class="box">Hey im a box</div>
+        <input type="text" placeholder="Enter your name">
+    </div>
+</body>
+</html>

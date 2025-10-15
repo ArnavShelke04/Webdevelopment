@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+    <style>
+        .container{
+            background-color: azure;
+            height: 80vh;
+            width: 30vw;
+        }
+        .box{
+            width: 34px;
+            height: 45px;
+            background-color: bisque;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: arnavkaanimation;
+            animation-duration: 3s;
+            animation-iteration-count: 3;
+            /* kitne baar repeat hoga */
+            /* animation-iteration-count: infinite; */
+            animation-timing-function: ease-out;
+            /* same as transitions */
+            animation-delay: 1s;
+            animation-direction: alternate-reverse;
+            /* animation-play-state: paused;
+            will pause the animation */
+            animation: arnavkaanimation 3s ease-out 1 backwards,
+                arnav 3s ease-in-out backwards;
+        }
+        @keyframes arnavkaanimation{
+            from{
+                background-color: yellow;
+            }
+            to{
+                background-color: pink;
+                transform: translate(1000px);
+            }
+        }
+        @keyframes arnav{
+            0%{
+                transform: rotate(100deg);
+            }
+            20%{
+                transform: rotate(200deg);
+            }
+            50%{
+                transform: rotate(300deg);
+            }
+            80%{
+                transform: rotate(400deg);
+            }
+            100%{
+                transform: rotate(500deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
