@@ -3,9 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bounce animation</title>
+    <style>
+        .container{
+            width: 500px;
+            height: 500px;
+            background-color: beige;
+            position: relative;
+        }
+        .box{
+            width: 50px;
+            height: 50px;
+            background-color: aqua;
+            border: 2px solid black;
+            border-radius: 50px;
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            animation: ymovement 1s ease-out  infinite alternate, xmovement 3s linear infinite ; ;
+            
+        }
+        @keyframes ymovement{
+            from{
+                bottom: 0;
+            }
+            to{
+                bottom: 100%;
+            }
+        }
+        @keyframes xmovement{
+            from{
+                left: 0;
+            }
+            to{
+                left: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="box"></div>
+    </div>
 </body>
 </html>
