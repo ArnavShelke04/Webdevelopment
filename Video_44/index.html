@@ -1,11 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        nav {
+            position: sticky;
+            height: 90px;
+            background-color: beige;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+
+            align-items: center;
+        }
+
+        nav ul li {
+            padding: 20px 40px;
+            margin: 10px;
+        }
+
+        nav .image img {
+            height: 50px;
+            margin: 10px 5px;
+            padding: 20px;
+        }
+
+        .box {
+            background-color: whitesmoke;
+            width: 180px;
+            height: 200px;
+            border: 2px solid black;
+            border-radius: 12px;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        .boxes {
+            display: grid;
+            grid-template-columns: 200px 200px 200px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box h1 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+        }
+        .box .download{
+            background-color: aqua;
+            width: 150px;
+            text-align: center;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            border: 2px;
+            border-radius: 12px;
+            transform: translateY(45px);
+            /* you can even use gap function or padding bottom */
+        }
+    </style>
 </head>
+
 <body>
-    
+    <header>
+        <nav>
+            <div class="image">
+                <img src="Screenshot 2025-07-18 130929.png" alt="no img">
+            </div>
+            <div class="list">
+                <ul>
+                    <li>Products</li>
+                    <li>Pricing</li>
+                    <li>Resources</li>
+                    <li>About Us</li>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+    <main>
+        <div class="boxes">
+            <div class="box english">
+                <h1>English</h1>
+                <div class="download">
+                    Download 32 mb
+                </div>
+            </div>
+            <div class="box french">
+                <h1>French</h1>
+                <div class="download">
+                    Download 32 mb
+                </div>
+            </div>
+            <div class="box german">
+                <h1>German</h1>
+                <div class="download">
+                    Download 32 mb
+                </div>
+            </div>
+            <div class="box japanese">
+                <h1>Japanese</h1>
+                <div class="download">
+                    Download 32 mb
+                </div>
+            </div>
+            <div class="box spanish">
+                <h1>Spanish</h1>
+                <div class="download">
+                    Download 32 mb
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
+
 </html>

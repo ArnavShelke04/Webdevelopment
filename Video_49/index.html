@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objectfit</title>
+    <style>
+        .container{
+            height: 488px;
+            width: 458px;
+            border: 2px solid black;
+            background-image: url("https://tse4.mm.bing.net/th/id/OIP.nljXULY7EBFIHzlf1QM-1QHaHa?pid=Api&P=0&h=180");
+            /* agar image chhoti hogi container se toh fir woh x and y main repeat karegi to fill space instead of resizing itself */
+            background-position: center center;
+            /* 50% 50% */
+            background-repeat: no-repeat;
+            /* for no repeating */
+            /* background-repeat: repeat-x; */
+            /* will only repeat in x direction */
+            background-clip: border-box;
+        }
+        img{
+            height: 150px;
+            width: 200px;
+            /* height and width apne hisaab se set karne par image ka aspect ratio and thus image kharab ho jati hai. thats why we use object-fit */
+            object-fit: cover;
+            /* cover basically says that jitni width aur height maine img ko dii hai utni cover kar do. basically image ka aspect ratio change nahi hoga but kuch image upar ya neeche (depending upon height and width) se crop ho jayegi */
+            object-position: top right;
+            /* basically we can choose ki kaunsa part hume chahiye and kaunsa cut hona chahiye in case of cover */
+            /* object-position: 10px 20px; */
+            /* we choose kitna cut hoga */
+            /* object-fit: contain; */
+            /* basically isse crop nahi hogi and extra space milegi hume vertically or horizontally */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <img src="https://tse4.mm.bing.net/th/id/OIP.nljXULY7EBFIHzlf1QM-1QHaHa?pid=Api&P=0&h=180" alt=""> -->
+         <!-- uncomment this for object fit properties and comment the background part -->
+    </div>
+</body>
+</html>
